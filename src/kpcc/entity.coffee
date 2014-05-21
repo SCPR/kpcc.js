@@ -6,5 +6,6 @@ class kpcc.Entity
         for attribute in @attributes
             @[attribute] = json[attribute]
 
-        for attribute of @nested_objects
-            @[key] = new kpcc.NESTED_OBJECTS[attribute](json[attribute])
+        for key in @nested_objects
+            if klass = kpcc.NESTED_OBJECTS[key]
+                @[key] = new kpcc[klass](json[key])

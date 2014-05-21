@@ -23,7 +23,7 @@ class kpcc.DataPoint extends kpcc.ApiEntity
             success: (data, textStatus, jqXHR) =>
                 if params["response_format"] is "simple"
                     # Just return the object.
-                    cb.bind(data["data_points"])()
+                    cb.bind(data[@KEY_PLURAL])()
 
                 else
                     collection = []

@@ -22,6 +22,8 @@ Neither method does any empty/null checks, so you should do it in your success c
 ```javascript
 kpcc.Article.find("news_stories-999", function() {
     // `this` is a kpcc.Article object (or null)
+    if (!this) return; // Or do something less subtle
+
     console.log(this.title)
     console.log(this.teaser)
 })
@@ -78,3 +80,4 @@ It will ask you the version.
 ### TODO
 * Build a stub API server so we can test against known data
 * Add all documented API endpoints to the respective classes.
+* Write tests for each endpoint

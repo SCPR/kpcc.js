@@ -12,7 +12,7 @@ class kpcc.ApiEntity extends kpcc.Entity
             data: params
 
             success: (data, textStatus, jqXHR) =>
-                collection = {}
+                collection = []
 
                 for obj in data[@KEY_PLURAL]
                     collection.push new @(obj)

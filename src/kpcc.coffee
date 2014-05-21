@@ -11,6 +11,6 @@ window.kpcc = {
         "sponsor"       : "Sponsor"
     }
 
-    api_url: (path) ->
-        return API_ROOT + path
+    api_url: (parts...) ->
+        return kpcc.API_ROOT + parts.join("/")
 }

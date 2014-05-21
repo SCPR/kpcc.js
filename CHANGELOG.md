@@ -3,6 +3,9 @@
 * Added "simple" response format to DataPoints
 * Added "by_url", "most_viewed", "most_commented" endpoints for Articles
 
+#### Fixes
+* Fixed error if nested object was missing
+
 
 ### 0.2.1
 * Fix ApiEntity#query()

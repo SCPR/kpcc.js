@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../development/kpcc-dev.js"></script>
+</head>
+
+<body>
+    <ul id="data1"></ul>
+    <ul id="data2"></ul>
+    <ul id="data3"></ul>
+
+    <script>
+        $(document).ready(function() {
+            kpcc.DataPoint.find("percent_reporting", function() {
+                $("#data1").append("<li>"+this.title+"</li>")
+                $("#data1").append("<li>"+this.updated_at+"</li>")
+            })
+
+            kpcc.DataPoint.query({ group: "elections-june2014" }, function() {
+                for (var i=0; i<this.length; i++) {
+                    var dp = this[i];
+
+                    $("#data2").append("<li>"+dp.title+"</li>")
+                    $("#data2").append("<li>"+dp.group+"</li>")
+                }
+            })
+
+            kpcc.DataPoint.query({ response_format: "simple" }, function() {
+                for (var prop in this) {
+                    if (!this.hasOwnProperty(prop)) continue;
+                    $("#data3").append("<li>"+prop+": "+this[prop]+"</li>")
+                }
+            })
+        });
+    </script>
+</body>
+</html>

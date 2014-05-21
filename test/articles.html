@@ -11,7 +11,6 @@
 
     <script>
         $(document).ready(function() {
-            // Test
             kpcc.Article.find("news_story-44301", function() {
                 $("#article1").append("<li>"+this.title+"</li>")
                 $("#article1").append("<li>"+this.public_url+"</li>")
@@ -20,7 +19,7 @@
             })
 
             kpcc.Article.query({ limit: 2 }, function() {
-                for(var i=0; i<this.length; i++) {
+                for (var i=0; i<this.length; i++) {
                     var article = this[i];
 
                     $("#article2").append("<li>"+article.title+"</li>")

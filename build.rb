@@ -1,8 +1,6 @@
 require 'uglifier'
 require 'coffee_script'
 
-version = File.read("VERSION").chomp
-
 files = %w[
   src/kpcc.coffee
   src/kpcc/entity.coffee
@@ -42,14 +40,26 @@ ensure
   coffee.unlink
 end
 
+# Write raw JS to development/
+File.open("development/kpcc-dev.js", "w") do |f|
+  f.write(js)
+end
+
+## RELEASE
+# Update the version, minify the javascript, write it to releases/
 if ENV["RELEASE"]
+  # Get version
+  print "Version (plain): "
+  version = gets.chomp
+
+  # Update VERSION
+  File.open("VERSION", "w") { |f| f.write(version) }
+
+  # Minify raw JS
   minified = Uglifier.compile(js)
 
+  # Raw minified JS to releases/
   File.open("releases/kpcc-#{version}.min.js", "w") do |f|
     f.write minified
-  end
-else
-  File.open("development/kpcc-dev.js", "w") do |f|
-    f.write(js)
   end
 end

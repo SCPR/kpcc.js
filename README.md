@@ -13,6 +13,9 @@ API Documentation: https://github.com/SCPR/api-docs/blob/master/KPCC/v3/
 TODO
 
 
+### Testing
+Open the files in the `test/` directory and check for errors. These are tested against the live KPCC API. You can also run it again a local server, just change `kpcc.API_ROOT` while testing.
+
 ### Building
 ```
 bundle install
@@ -28,3 +31,6 @@ bundle exec ruby release.rb
 ```
 
 It will ask you the version.
+
+### TODO
+* Build a stub API server so we can test against known data

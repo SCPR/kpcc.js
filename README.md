@@ -44,7 +44,8 @@ kpcc.Article.query({ categories: "film,music", limit: 10 } function() {
 })
 ```
 
-**Note**: For `kpcc.DataPoint`, if you pass the `request_format: "simple"` parameter to `query()`, its callback will just receive a plain object, eg:
+##### Note: `DataPoint` "simple" request format
+For `kpcc.DataPoint`, if you pass the `request_format: "simple"` parameter to `query()`, its callback will just receive a plain object, eg:
 
 ```json
 // request_format: simple
@@ -58,7 +59,14 @@ kpcc.Article.query({ categories: "film,music", limit: 10 } function() {
 This only applies to `DataPoint`. If you don't pass a `request_format` parameter or set it to `full` (the default), callback will be bound normally. See the [Data Points API documentation](https://github.com/SCPR/api-docs/blob/master/KPCC/v3/endpoints/data_points.md) for more information.
 
 
-**Note**: For `kpcc.Schedule`, `find` is an alias for `at`, which accepts a time to lookup.
+##### Note: `Schedule` find() alias
+For `kpcc.Schedule`, `find()` is an alias for `at()`, which accepts a time to lookup:
+
+```javascript
+// These two lines are identical:
+kpcc.Schedule.find(new Date().getTime(), function() { ... })
+kpcc.Schedule.at(new Date().getTime(), function() { ... })
+```
 
 
 ### Testing

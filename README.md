@@ -78,7 +78,7 @@ bundle install
 bundle exec ruby build.rb
 ```
 
-Alternatively, you can just run Guard (via `bundle exec guard`), an a development version will be built for you every time you save a coffee file.
+Alternatively (and preferably), you can just run Guard (via `bundle exec guard`), and a development version will be built for you every time you save a coffee file.
 
 
 ### Releasing

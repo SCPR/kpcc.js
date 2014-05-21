@@ -11,7 +11,7 @@ class kpcc.ApiEntity extends kpcc.Entity
             url: kpcc.api_url(@ENDPOINT)
             data: params
 
-            success: (data, textStatus, jqXHR) ->
+            success: (data, textStatus, jqXHR) =>
                 collection = {}
 
                 for obj in data[@KEY_PLURAL]
@@ -24,9 +24,8 @@ class kpcc.ApiEntity extends kpcc.Entity
         $.ajax
             type: "GET"
             dataType: "json"
-            url: kpcc.api_url(@ENDPOINT)
-            data:
-                id: id
+            url: kpcc.api_url(@ENDPOINT, id)
 
-            success: (data, textStatus, jqXHR) ->
-                cb.bind(data[@KEY_SINGULAR])()
+            success: (data, textStatus, jqXHR) =>
+                obj = new @(data[@KEY_SINGULAR])
+                cb.bind(obj)()

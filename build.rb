@@ -37,17 +37,19 @@ begin
   coffee.rewind
 
   js = CoffeeScript.compile(coffee.read)
-
-  File.open("development/kpcc-dev.js", "w") do |f|
-    f.write(js)
-  end
-
-  minified = Uglifier.compile(js)
 ensure
   coffee.close
   coffee.unlink
 end
 
-File.open("releases/kpcc-#{version}.min.js", "w") do |f|
-  f.write minified
+if ENV["RELEASE"]
+  minified = Uglifier.compile(js)
+
+  File.open("releases/kpcc-#{version}.min.js", "w") do |f|
+    f.write minified
+  end
+else
+  File.open("development/kpcc-dev.js", "w") do |f|
+    f.write(js)
+  end
 end

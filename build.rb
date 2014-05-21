@@ -37,6 +37,11 @@ begin
   coffee.rewind
 
   js = CoffeeScript.compile(coffee.read)
+
+  File.open("development/kpcc-dev.js", "w") do |f|
+    f.write(js)
+  end
+
   minified = Uglifier.compile(js)
 ensure
   coffee.close

@@ -23,5 +23,8 @@ Alternatively, you can just run Guard (via `bundle exec guard`), an a developmen
 
 
 ### Releasing
-Update VERSION, build, tag, push to github.
+```
+bundle exec ruby release.rb
+```
 
+It will ask you the version and whether or not you want to tag it in git.

@@ -90,3 +90,4 @@ It will ask you the version.
 
 ### TODO
 * Build a stub API server so we can test against known data
+* Remove jQuery dependency. The only thing that needs jquery is `$.ajax()` and `$.extend()`, which both only occur once and in the same function.

@@ -1,0 +1,19 @@
+## KPCC.js
+
+A javascript client for the KPCC api **version 3 only**.
+
+API Documentation: https://github.com/SCPR/api-docs/blob/master/KPCC/v3/
+
+
+### Usage
+TODO
+
+### Building
+```
+bundle install
+bundle exec ruby build.rb
+```
+
+### Releasing
+Update VERSION, build, tag, push to github.
+

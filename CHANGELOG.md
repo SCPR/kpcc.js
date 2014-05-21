@@ -1,4 +1,4 @@
-### 0.3.0 [wip]
+### 0.3.0
 #### Additions
 * Added "simple" response format to DataPoints
 * Added "by_url", "most_viewed", "most_commented" endpoints for `Articles`

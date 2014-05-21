@@ -14,9 +14,7 @@ class kpcc.DataPoint extends kpcc.ApiEntity
 
     # Override from ApiEntity because the response format could be different
     @query: (params={}, cb) ->
-        $.ajax
-            type: "GET"
-            dataType: "json"
+        @_ajax
             url: kpcc.api_url(@ENDPOINT)
             data: params
 
@@ -26,9 +24,4 @@ class kpcc.DataPoint extends kpcc.ApiEntity
                     cb.bind(data[@KEY_PLURAL])()
 
                 else
-                    collection = []
-
-                    for obj in data[@KEY_PLURAL]
-                        collection.push new @(obj)
-
-                    cb.bind(collection)()
+                    @_collection_cb(data, cb)

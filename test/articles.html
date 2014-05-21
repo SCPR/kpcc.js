@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../development/kpcc-dev.js"></script>
+</head>
+
+<body>
+    <ul id="article1"></ul>
+    <ul id="article2"></ul>
+
+    <script>
+        $(document).ready(function() {
+            // Test
+            kpcc.Article.find("news_story-44301", function() {
+                $("#article1").append("<li>"+this.title+"</li>")
+                $("#article1").append("<li>"+this.public_url+"</li>")
+
+                // TODO add assertions
+            })
+
+            kpcc.Article.query({ limit: 2 }, function() {
+                for(var i=0; i<this.length; i++) {
+                    var article = this[i];
+
+                    $("#article2").append("<li>"+article.title+"</li>")
+                    $("#article2").append("<li>"+article.public_url+"</li>")
+                }
+            })
+        });
+    </script>
+</body>
+</html>

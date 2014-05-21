@@ -1,5 +1,5 @@
 class kpcc.Abstract extends kpcc.Entity
-    attributes = [
+    attributes: [
         "source"
         "url"
         "headline"
@@ -7,7 +7,7 @@ class kpcc.Abstract extends kpcc.Entity
         "article_published_at"
     ]
 
-    nested_objects = [
+    nested_objects: [
         "assets"
         "audio"
         "category"

@@ -3,7 +3,7 @@ class kpcc.Event extends kpcc.ApiEntity
     @KEY_SINGULAR   = "event"
     @KEY_PLURAL     = "events"
 
-    attributes = [
+    attributes: [
         "id"
         "title"
         "public_url"
@@ -19,7 +19,7 @@ class kpcc.Event extends kpcc.ApiEntity
         "rsvp_url"
     ]
 
-    nested_objects = [
+    nested_objects: [
         "assets"
         "audio"
         "program"

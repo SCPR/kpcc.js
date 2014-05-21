@@ -1,5 +1,5 @@
 class kpcc.Location extends kpcc.Entity
-    attributes = [
+    attributes: [
         "title"
         "url"
         "address"

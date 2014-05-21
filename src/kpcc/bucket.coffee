@@ -3,12 +3,12 @@ class kpcc.Bucket extends kpcc.ApiEntity
     @KEY_SINGULAR   = "bucket"
     @KEY_PLURAL     = "buckets"
 
-    attributes = [
+    attributes: [
         "title"
         "slug"
         "updated_at"
     ]
 
-    nested_objects = [
+    nested_objects: [
         "articles"
     ]

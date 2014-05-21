@@ -1,5 +1,5 @@
 class kpcc.Asset extends kpcc.Entity
-    attributes = [
+    attributes: [
         "title"
         "caption"
         "owner"

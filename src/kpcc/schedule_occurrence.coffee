@@ -3,7 +3,7 @@ class kpcc.ScheduleOccurrence extends kpcc.ApiEntity
     @KEY_SINGULAR   = "schedule_occurrence"
     @KEY_PLURAL     = "schedule_occurrences"
 
-    attributes = [
+    attributes: [
         "title"
         "public_url"
         "starts_at"
@@ -11,6 +11,6 @@ class kpcc.ScheduleOccurrence extends kpcc.ApiEntity
         "is_recurring"
     ]
 
-    nested_objects = [
+    nested_objects: [
         "program"
     ]

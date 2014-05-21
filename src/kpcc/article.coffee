@@ -3,7 +3,7 @@ class kpcc.Article extends kpcc.ApiEntity
     @KEY_SINGULAR   = "article"
     @KEY_PLURAL     = "articles"
 
-    attributes = [
+    attributes: [
         "id"
         "title"
         "short_title"
@@ -15,7 +15,7 @@ class kpcc.Article extends kpcc.ApiEntity
         "thumbnail"
     ]
 
-    nested_objects = [
+    nested_objects: [
         "assets"
         "audio"
         "category"

@@ -1,5 +1,5 @@
 class kpcc.Sponsor extends kpcc.Entity
-    attributes = [
+    attributes: [
         "title"
         "url"
     ]

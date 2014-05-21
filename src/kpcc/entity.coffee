@@ -1,6 +1,6 @@
 class kpcc.Entity
-    attributes      = []
-    nested_objects  = []
+    attributes      : []
+    nested_objects  : []
 
     constructor: (json) ->
         for attribute in @attributes

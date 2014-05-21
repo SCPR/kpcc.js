@@ -3,7 +3,7 @@ class kpcc.Category extends kpcc.ApiEntity
     @KEY_SINGULAR   = "category"
     @KEY_PLURAL     = "categories"
 
-    attributes = [
+    attributes: [
         "id"
         "slug"
         "title"

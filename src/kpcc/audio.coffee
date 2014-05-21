@@ -3,7 +3,7 @@ class kpcc.Audio extends kpcc.ApiEntity
     @KEY_SINGULAR   = "audio"
     @KEY_PLURAL     = "audio"
 
-    attributes = [
+    attributes: [
         "id"
         "description"
         "url"

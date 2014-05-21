@@ -3,7 +3,7 @@ class kpcc.Blog extends kpcc.ApiEntity
     @KEY_SINGULAR   = "article"
     @KEY_PLURAL     = "articles"
 
-    attributes = [
+    attributes: [
         "title"
         "slug"
         "tagline"

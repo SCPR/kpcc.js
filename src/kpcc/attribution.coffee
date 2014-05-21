@@ -1,5 +1,5 @@
 class kpcc.Attribution extends kpcc.Entity
-    attributes = [
+    attributes: [
         "name"
         "role_text"
         "role"

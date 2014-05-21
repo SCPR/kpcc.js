@@ -3,7 +3,7 @@ class kpcc.Program extends kpcc.ApiEntity
     @KEY_SINGULAR   = "program"
     @KEY_PLURAL     = "programs"
 
-    attributes = [
+    attributes: [
         "title"
         "slug"
         "host"
@@ -16,7 +16,7 @@ class kpcc.Program extends kpcc.ApiEntity
         "public_url"
     ]
 
-    nested_objects = [
+    nested_objects: [
         "assets"
         "audio"
         "category"

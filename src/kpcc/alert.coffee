@@ -3,7 +3,7 @@ class kpcc.Alert extends kpcc.ApiEntity
     @KEY_SINGULAR   = "alert"
     @KEY_PLURAL     = "alerts"
 
-    attributes = [
+    attributes: [
         "id"
         "headline"
         "type"

@@ -3,12 +3,12 @@ class kpcc.Edition extends kpcc.ApiEntity
     @KEY_SINGULAR   = "edition"
     @KEY_PLURAL     = "editions"
 
-    attributes = [
+    attributes: [
         "id"
         "title"
         "published_at"
     ]
 
-    nested_objects = [
+    nested_objects: [
         "abstracts"
     ]

@@ -3,7 +3,7 @@ class kpcc.DataPoint extends kpcc.ApiEntity
     @KEY_SINGULAR   = "data_point"
     @KEY_PLURAL     = "data_points"
 
-    attributes = [
+    attributes: [
         "title"
         "group"
         "key"

@@ -29,4 +29,4 @@ class kpcc.ApiEntity extends kpcc.Entity
                 id: id
 
             success: (data, textStatus, jqXHR) ->
-                cb.bind(collection)(data[@KEY_SINGULAR])
+                cb.bind(data[@KEY_SINGULAR])()

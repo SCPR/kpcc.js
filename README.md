@@ -82,5 +82,3 @@ It will ask you the version.
 
 ### TODO
 * Build a stub API server so we can test against known data
-* Add all documented API endpoints to the respective classes.
-* Write tests for each endpoint

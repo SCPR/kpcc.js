@@ -6,30 +6,35 @@
 </head>
 
 <body>
-    <ul id="data1"></ul>
-    <ul id="data2"></ul>
-    <ul id="data3"></ul>
+    <h2>find()</h2>
+    <ul id="test1"></ul>
+
+    <h2>query()</h2>
+    <ul id="test2"></ul>
+
+    <h2>simple format</h2>
+    <ul id="test3"></ul>
 
     <script>
         $(document).ready(function() {
             kpcc.DataPoint.find("percent_reporting", function() {
-                $("#data1").append("<li>"+this.title+"</li>")
-                $("#data1").append("<li>"+this.updated_at+"</li>")
+                $("#test1").append("<li>"+this.title+"</li>")
+                $("#test1").append("<li>"+this.updated_at+"</li>")
             })
 
             kpcc.DataPoint.query({ group: "elections-june2014" }, function() {
                 for (var i=0; i<this.length; i++) {
                     var dp = this[i];
 
-                    $("#data2").append("<li>"+dp.title+"</li>")
-                    $("#data2").append("<li>"+dp.group+"</li>")
+                    $("#test2").append("<li>"+dp.title+"</li>")
+                    $("#test2").append("<li>"+dp.group+"</li>")
                 }
             })
 
             kpcc.DataPoint.query({ response_format: "simple" }, function() {
                 for (var prop in this) {
                     if (!this.hasOwnProperty(prop)) continue;
-                    $("#data3").append("<li>"+prop+": "+this[prop]+"</li>")
+                    $("#test3").append("<li>"+prop+": "+this[prop]+"</li>")
                 }
             })
         });

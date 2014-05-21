@@ -59,7 +59,7 @@ For `kpcc.DataPoint`, if you pass the `request_format: "simple"` parameter to `q
 This only applies to `DataPoint`. If you don't pass a `request_format` parameter or set it to `full` (the default), callback will be bound normally. See the [Data Points API documentation](https://github.com/SCPR/api-docs/blob/master/KPCC/v3/endpoints/data_points.md) for more information.
 
 
-##### Note: `Schedule` find() alias
+##### Note: `Schedule.find()` usage/alias
 For `kpcc.Schedule`, `find()` is an alias for `at()`, which accepts a time to lookup:
 
 ```javascript

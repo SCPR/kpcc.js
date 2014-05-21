@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../development/kpcc-dev.js"></script>
+</head>
+
+<body>
+    <div id="data-dump">
+        <ul></ul>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            kpcc.Article.find("news_story-44301", function() {
+                $("#data-dump ul").append("<li>"+this.title+"</li>")
+                $("#data-dump ul").append("<li>"+this.public_url+"</li>")
+            })
+        });
+    </script>
+</body>
+</html>

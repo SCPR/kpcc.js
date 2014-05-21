@@ -27,4 +27,4 @@ Alternatively, you can just run Guard (via `bundle exec guard`), an a developmen
 bundle exec ruby release.rb
 ```
 
-It will ask you the version and whether or not you want to tag it in git.
+It will ask you the version.

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../development/kpcc-dev.js"></script>
+</head>
+
+<body>
+    <h2>at()</h2>
+    <ul id="test1"></ul>
+
+    <h2>find() alias</h2>
+    <ul id="test2"></ul>
+
+    <h2>current()</h2>
+    <ul id="test3"></ul>
+
+    <h2>query()</h2>
+    <ul id="test4"></ul>
+
+    <script>
+        $(document).ready(function() {
+            kpcc.Schedule.at((new Date().getTime() / 1000) - 60*60*20, function() {
+                $("#test1").append("<li>"+this.title+"</li>")
+                $("#test1").append("<li>"+this.starts_at+"</li>")
+            })
+
+            kpcc.Schedule.find((new Date().getTime() / 1000) - 60*60*20, function() {
+                $("#test2").append("<li>"+this.title+"</li>")
+                $("#test2").append("<li>"+this.starts_at+"</li>")
+            })
+
+            kpcc.Schedule.current(function() {
+                $("#test3").append("<li>"+this.title+"</li>")
+                $("#test3").append("<li>"+this.starts_at+"</li>")
+            })
+
+            kpcc.Schedule.query({ length: 24*60*60 }, function() {
+                for (var i = 0; i < this.length; i++) {
+                    var occ = this[i];
+                    $("#test4").append("<li>"+occ.title+"</li>")
+                    $("#test4").append("<li>"+occ.starts_at+"</li>")
+                }
+            })
+        });
+    </script>
+</body>
+</html>

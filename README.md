@@ -58,6 +58,9 @@ kpcc.Article.query({ categories: "film,music", limit: 10 } function() {
 This only applies to `DataPoint`. If you don't pass a `request_format` parameter or set it to `full` (the default), callback will be bound normally. See the [Data Points API documentation](https://github.com/SCPR/api-docs/blob/master/KPCC/v3/endpoints/data_points.md) for more information.
 
 
+**Note**: For `kpcc.Schedule`, `find` is an alias for `at`, which accepts a time to lookup.
+
+
 ### Testing
 Open the files in the `test/` directory and check for errors. These are tested against the live KPCC API. You can also run it again a local server, just change `kpcc.API_ROOT` while testing.
 

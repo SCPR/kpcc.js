@@ -1,10 +1,14 @@
 ### 0.3.0 [wip]
 #### Additions
 * Added "simple" response format to DataPoints
-* Added "by_url", "most_viewed", "most_commented" endpoints for Articles
+* Added "by_url", "most_viewed", "most_commented" endpoints for `Articles`
+* Added "at", "current" endpoints to `Schedule`
 
 #### Fixes
 * Fixed error if nested object was missing
+
+#### Changes
+* Changed `ScheduleOccurrence` to `Schedule`
 
 
 ### 0.2.1

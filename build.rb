@@ -23,7 +23,7 @@ files = %w[
   src/kpcc/event.coffee
   src/kpcc/location.coffee
   src/kpcc/program.coffee
-  src/kpcc/schedule_occurrence.coffee
+  src/kpcc/schedule.coffee
   src/kpcc/sponsor.coffee
 ]
 

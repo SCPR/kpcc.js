@@ -83,7 +83,7 @@ Alternatively (and preferably), you can just run Guard (via `bundle exec guard`)
 
 ### Releasing
 ```
-bundle exec ruby build.rb RELEASE=true
+RELEASE=true bundle exec ruby build.rb
 ```
 
 It will ask you the version.

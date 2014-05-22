@@ -1,3 +1,8 @@
+### 0.3.1
+#### Fixes
+* Fix Blog class to use correct endpoint/keys
+
+
 ### 0.3.0
 #### Additions
 * Added "simple" response format to DataPoints

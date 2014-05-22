@@ -1,7 +1,7 @@
 class kpcc.Blog extends kpcc.ApiEntity
-    @ENDPOINT       = "articles"
-    @KEY_SINGULAR   = "article"
-    @KEY_PLURAL     = "articles"
+    @ENDPOINT       = "blogs"
+    @KEY_SINGULAR   = "blog"
+    @KEY_PLURAL     = "blogs"
 
     attributes: [
         "title"

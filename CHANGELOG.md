@@ -1,4 +1,4 @@
-### 0.4.0 (unreleased)
+### 1.0.0.beta (unreleased)
 #### Additions
 * Added tags endpoint, tags object to Articles
 * Added generic `kpcc.Query()` function.

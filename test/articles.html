@@ -12,7 +12,7 @@
     <h2>Query (limit 2)</h2>
     <ul id="article2"></ul>
 
-    <h2>by_url</h2>
+    <h2>By URL</h2>
     <ul id="test3"></ul>
 
     <h2>Most Viewed</h2>
@@ -26,6 +26,9 @@
             kpcc.Article.find("news_story-44301", function() {
                 $("#article1").append("<li>"+this.title+"</li>")
                 $("#article1").append("<li>"+this.public_url+"</li>")
+                $("#article1").append("<li>"+this.assets.length+"</li>")
+                $("#article1").append("<li>"+this.attributions.length+"</li>")
+                $("#article1").append("<li>"+this.audio.length+"</li>")
 
                 // TODO add assertions
             })

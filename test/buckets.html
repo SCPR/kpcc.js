@@ -14,7 +14,7 @@
 
     <script>
         $(document).ready(function() {
-            kpcc.Bucket.find("20", function() {
+            kpcc.Bucket.find("without-a-net", function() {
                 $("#test1").append("<li>"+this.title+"</li>")
                 $("#test1").append("<li>"+this.slug+"</li>")
                 $("#test1").append("<li>"+this.articles.length+"</li>")

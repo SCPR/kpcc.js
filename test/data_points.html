@@ -22,7 +22,7 @@
                 $("#test1").append("<li>"+this.updated_at+"</li>")
             })
 
-            kpcc.DataPoint.query({ group: "elections-june2014" }, function() {
+            kpcc.DataPoint.query({ group: "election-june2014" }, function() {
                 for (var i=0; i<this.length; i++) {
                     var dp = this[i];
 

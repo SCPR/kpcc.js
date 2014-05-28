@@ -23,6 +23,7 @@
             kpcc.Schedule.at((new Date().getTime() / 1000) - 60*60*20, function() {
                 $("#test1").append("<li>"+this.title+"</li>")
                 $("#test1").append("<li>"+this.starts_at+"</li>")
+                $("#test1").append("<li>"+this.program.title+"</li>")
             })
 
             kpcc.Schedule.find((new Date().getTime() / 1000) - 60*60*20, function() {

@@ -7,6 +7,9 @@
 #### Changes
 * [BREAKING] Changed `most_viewed`, `most_commented`, and `by_url` to `mostViewed`, `mostCommented`, and `byUrl`.
 
+#### Fixes
+* Fixed nested objects
+
 
 ### 0.3.1
 #### Fixes

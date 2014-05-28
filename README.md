@@ -107,10 +107,11 @@ Get an article object by its public URL.
 Callback is bound to a single Article object.
 
 #### Generic Querying
-You can also send a generic query to the API. This allows you to manipulate the API query or use brand new API features (before this lib is updated to reflect those features), but you will miss some of the automatic attribute assignment and niceties.
+You can also send a generic query to the API. This allows you to manipulate the API query or use brand new API features (before this lib is updated to reflect those features), but you will miss some of the automatic attribute assignment and niceties. The callback gets bound to the raw response object.
 
 ```javascript
 kpcc.Query("articles", { categories: "politics" }, function() {
+    // 'this' is the raw response data.
     articles = this.articles
 
     for (var i = 0; i < articles.length; i++) {

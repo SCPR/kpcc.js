@@ -16,9 +16,4 @@ class kpcc.Program extends kpcc.ApiEntity
         "public_url"
     ]
 
-    nested_objects: [
-        "assets"
-        "audio"
-        "category"
-        "attributions"
-    ]
+    @all = @default

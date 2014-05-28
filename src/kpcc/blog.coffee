@@ -11,3 +11,5 @@ class kpcc.Blog extends kpcc.ApiEntity
         "rss_url"
         "public_url"
     ]
+
+    @all = @default

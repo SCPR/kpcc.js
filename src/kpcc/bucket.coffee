@@ -12,3 +12,5 @@ class kpcc.Bucket extends kpcc.ApiEntity
     nested_objects: [
         "articles"
     ]
+
+    @all = @default

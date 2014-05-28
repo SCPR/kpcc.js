@@ -7,3 +7,5 @@ class kpcc.Tag extends kpcc.ApiEntity
         "title"
         "slug"
     ]
+
+    @all = @default

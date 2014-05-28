@@ -9,3 +9,5 @@ class kpcc.Category extends kpcc.ApiEntity
         "title"
         "public_url"
     ]
+
+    @all = @default

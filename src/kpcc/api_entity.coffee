@@ -21,6 +21,12 @@ class kpcc.ApiEntity extends kpcc.Entity
             success: (data, textStatus, jqXHR) =>
                 @_singular_cb(data, cb)
 
+    # The default query when no parameters are passed.
+    # This is here mostly so we can alias `all()` to it in
+    # extended classes.
+    @default: (cb) ->
+        @query({}, cb)
+
 
     @_singular_cb: (data, cb) ->
         obj = new @(data[@KEY_SINGULAR])

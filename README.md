@@ -68,6 +68,23 @@ kpcc.Schedule.find(new Date().getTime(), function() { ... })
 kpcc.Schedule.at(new Date().getTime(), function() { ... })
 ```
 
+#### `all()` (only available on some endpoints)
+Some endpoints provide a convenience method, `all()`, which is a shorthand way to query the endpoint without any parameters and return all objects.
+
+The classes which support this function are:
+* Blog
+* Bucket
+* Category
+* Program
+* Tag
+
+```javascript
+Blog.all(function() {
+    // `this` is the collection of all Blogs
+    console.log(this.length) // Blog count
+})
+```
+
 #### Special Endpoints
 ##### `Schedule.current()`
 Returns the currently-airing program/event.  

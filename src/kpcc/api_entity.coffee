@@ -5,6 +5,7 @@ class kpcc.ApiEntity extends kpcc.Entity
     @KEY_SINGULAR   = null
 
 
+    # Query an endpoint with parameters.
     @query: (params={}, cb) ->
         @_ajax
             url: kpcc.api_url(@ENDPOINT)
@@ -13,7 +14,7 @@ class kpcc.ApiEntity extends kpcc.Entity
             success: (data, textStatus, jqXHR) =>
                 @_collection_cb(data, cb)
 
-
+    # Find an object by its ID.
     @find: (id, cb) ->
         @_ajax
             url: kpcc.api_url(@ENDPOINT, id)

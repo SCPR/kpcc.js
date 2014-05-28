@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../development/kpcc-dev.js"></script>
+</head>
+
+<body>
+    <h2>Query() (articles limit 2)</h2>
+    <ul id="test1"></ul>
+
+    <script>
+        $(document).ready(function() {
+            kpcc.Query("articles", { limit: 2 }, function() {
+                for (var i=0; i<this.articles.length; i++) {
+                    var article = this.articles[i];
+
+                    $("#test1").append("<li>"+article.title+"</li>")
+                    $("#test1").append("<li>"+article.public_url+"</li>")
+                }
+            })
+        });
+    </script>
+</body>
+</html>

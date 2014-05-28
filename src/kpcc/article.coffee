@@ -24,7 +24,7 @@ class kpcc.Article extends kpcc.ApiEntity
     ]
 
 
-    @by_url: (url, cb) ->
+    @byUrl: (url, cb) ->
         @_ajax
             url: kpcc.api_url(@ENDPOINT, "by_url")
             data:
@@ -34,7 +34,7 @@ class kpcc.Article extends kpcc.ApiEntity
                 @_singular_cb(data, cb)
 
 
-    @most_viewed: (cb) ->
+    @mostViewed: (cb) ->
         @_ajax
             url: kpcc.api_url(@ENDPOINT, "most_viewed")
 
@@ -42,7 +42,7 @@ class kpcc.Article extends kpcc.ApiEntity
                 @_collection_cb(data, cb)
 
 
-    @most_commented: (cb) ->
+    @mostCommented: (cb) ->
         @_ajax
             url: kpcc.api_url(@ENDPOINT, "most_commented")
 

@@ -102,7 +102,7 @@ Callback is bound to an Article collection.
 Returns the popular (by comment count) articles.  
 Callback is bound to an Article collection.
 
-##### `Article.byUrl(String)
+##### `Article.byUrl(String)`
 Get an article object by its public URL.  
 Callback is bound to a single Article object.
 

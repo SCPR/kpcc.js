@@ -39,12 +39,12 @@
                 }
             })
 
-            kpcc.Article.by_url("http://www.scpr.org/blogs/news/2014/05/18/16642/it-s-an-expensive-world-after-all-disneyland-hikes/", function() {
+            kpcc.Article.byUrl("http://www.scpr.org/blogs/news/2014/05/18/16642/it-s-an-expensive-world-after-all-disneyland-hikes/", function() {
                 $("#test3").append("<li>"+this.title+"</li>")
                 $("#test3").append("<li>"+this.public_url+"</li>")
             })
 
-            kpcc.Article.most_viewed(function() {
+            kpcc.Article.mostViewed(function() {
                 for (var i=0; i<this.length; i++) {
                     var article = this[i];
 
@@ -53,7 +53,7 @@
                 }
             })
 
-            kpcc.Article.most_commented(function() {
+            kpcc.Article.mostCommented(function() {
                 for (var i=0; i<this.length; i++) {
                     var article = this[i];
 

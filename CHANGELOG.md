@@ -1,3 +1,7 @@
+### 0.4.0 (unreleased)
+#### Additions
+* Added tags endpoint, tags object to Articles
+
 ### 0.3.1
 #### Fixes
 * Fix Blog class to use correct endpoint/keys

@@ -20,6 +20,7 @@ class kpcc.Article extends kpcc.ApiEntity
         "audio"
         "category"
         "attributions"
+        "tags"
     ]
 
 

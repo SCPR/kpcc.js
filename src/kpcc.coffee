@@ -6,6 +6,7 @@ window.kpcc = {
         "assets"        : "Asset"
         "audio"         : "Audio"
         "attributions"  : "Attribution"
+        "tags"          : "Tag"
         "program"       : "Program"
         "location"      : "Location"
         "sponsor"       : "Sponsor"

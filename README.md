@@ -68,6 +68,48 @@ kpcc.Schedule.find(new Date().getTime(), function() { ... })
 kpcc.Schedule.at(new Date().getTime(), function() { ... })
 ```
 
+#### Special Endpoints
+##### `Schedule.current()`
+Returns the currently-airing program/event.  
+Callback is bound to a single Schedule object.
+
+##### `Schedule.at(Number)`
+Pass in a unix timestamp to get the program on at that time.  
+Callback is bound to a single Schedule object.
+
+##### `Article.mostViewed()`
+Returns the popular (by views) articles.  
+Callback is bound to an Article collection.
+
+##### `Article.mostCommented()`
+Returns the popular (by comment count) articles.  
+Callback is bound to an Article collection.
+
+##### `Article.byUrl(String)
+Get an article object by its public URL.  
+Callback is bound to a single Article object.
+
+#### Generic Querying
+You can also send a generic query to the API. This allows you do manipulate the API query or use brand new API features (before this lib is updated to reflect those features), but you will miss some of the automatic attribute assignment and niceties.
+
+```javascript
+kpcc.Query("articles", { categories: "politics" }, function() {
+    articles = this.articles
+
+    for (var i = 0; i < articles.length; i++) {
+        var article = articles[i];
+
+        console.log(article.title)
+        console.log(article.teaser)
+    }
+})
+
+kpcc.Query("tags/elections-2014", {}, function() {
+    tag = this.tag
+    console.log(tag.title)
+})
+```
+
 
 ### Testing
 Open the files in the `test/` directory and check for errors. These are tested against the live KPCC API. You can also run it again a local server, just change `kpcc.API_ROOT` while testing.

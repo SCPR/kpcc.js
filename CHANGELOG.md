@@ -1,6 +1,11 @@
 ### 0.4.0 (unreleased)
 #### Additions
 * Added tags endpoint, tags object to Articles
+* Added generic `kpcc.Query()` function.
+
+#### Changes
+* [BREAKING] Changed `most_viewed`, `most_commented`, and `by_url` to `mostViewed`, `mostCommented`, and `byUrl`.
+
 
 ### 0.3.1
 #### Fixes

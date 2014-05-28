@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../development/kpcc-dev.js"></script>
+</head>
+
+<body>
+    <h2>Find</h2>
+    <ul id="test1"></ul>
+
+    <h2>Query (limit 2)</h2>
+    <ul id="test2"></ul>
+
+    <script>
+        $(document).ready(function() {
+            kpcc.Event.find("999", function() {
+                $("#test1").append("<li>"+this.title+"</li>")
+                $("#test1").append("<li>"+this.starts_at+"</li>")
+                $("#test1").append("<li>"+this.location.title+"</li>")
+            })
+
+            kpcc.Event.query({ limit: 2 }, function() {
+                for (var i=0; i<this.length; i++) {
+                    var obj = this[i];
+
+                    $("#test2").append("<li>"+obj.title+"</li>")
+                    $("#test2").append("<li>"+obj.starts_at+"</li>")
+                }
+            })
+        });
+    </script>
+</body>
+</html>

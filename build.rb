@@ -23,6 +23,7 @@ files = %w[
   src/kpcc/program.coffee
   src/kpcc/schedule.coffee
   src/kpcc/sponsor.coffee
+  src/kpcc/tag.coffee
 ]
 
 coffee = Tempfile.new("coffee")

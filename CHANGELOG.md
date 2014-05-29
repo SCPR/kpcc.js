@@ -1,8 +1,9 @@
-### 1.0.0.beta (unreleased)
+### 1.0.0
 #### Additions
 * Added tags endpoint, tags object to Articles
 * Added generic `kpcc.Query()` function.
 * Added `all()` function to models which can return all objects.
+* Added 'meta' argument to query callbacks, which contains the 'meta' node from the API.
 
 #### Changes
 * [BREAKING] Changed `most_viewed`, `most_commented`, and `by_url` to `mostViewed`, `mostCommented`, and `byUrl`.

@@ -30,6 +30,6 @@ window.kpcc = {
             data: params
 
             success: (data, textStatus, jqXHR) =>
-                cb.bind(data)()
+                cb.bind(data)(data["meta"])
 
 }

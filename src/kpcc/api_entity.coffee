@@ -31,7 +31,7 @@ class kpcc.ApiEntity extends kpcc.Entity
 
     @_singular_cb: (data, cb) ->
         obj = new @(data[@KEY_SINGULAR])
-        cb.bind(obj)()
+        cb.bind(obj)(data["meta"])
 
     @_collection_cb: (data, cb) ->
         collection = []
@@ -39,7 +39,7 @@ class kpcc.ApiEntity extends kpcc.Entity
         for obj in data[@KEY_PLURAL]
             collection.push new @(obj)
 
-        cb.bind(collection)()
+        cb.bind(collection)(data["meta"])
 
     @_ajax: (attributes) ->
         $.ajax $.extend({ type: "GET", dataType: "json" }, attributes)

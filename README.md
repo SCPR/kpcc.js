@@ -128,6 +128,22 @@ kpcc.Query("tags/elections-2014", {}, function() {
 })
 ```
 
+#### Accessing request metadata
+Each API response from KPCC comes with a root-level `meta` object. This object is passed to your request callback as an argument, which you can use if you want.
+
+```javascript
+kpcc.Article.find("news_stories-999", function(meta) {
+    console.log(meta.version) // The API version
+    console.log(meta.status.message)
+
+    if (meta.status.code == 200) {
+        console.log("Successful request!")
+    } else {
+        console.log("Something went wrong: " + meta.status.message)
+    }
+})
+```
+
 
 ### Testing
 Open the files in the `test/` directory and check for errors. These are tested against the live KPCC API. You can also run it again a local server, just change `kpcc.API_ROOT` while testing.

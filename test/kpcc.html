@@ -9,6 +9,9 @@
     <h2>Query() (articles limit 2)</h2>
     <ul id="test1"></ul>
 
+    <h2>Metadata</h2>
+    <ul id="test2"></ul>
+
     <script>
         $(document).ready(function() {
             kpcc.Query("articles", { limit: 2 }, function() {
@@ -18,6 +21,12 @@
                     $("#test1").append("<li>"+article.title+"</li>")
                     $("#test1").append("<li>"+article.public_url+"</li>")
                 }
+            })
+
+            kpcc.Program.all(function(meta) {
+                $("#test2").append("<li>"+meta.version+"</li>")
+                $("#test2").append("<li>"+meta.status.code+"</li>")
+                $("#test2").append("<li>"+meta.status.message+"</li>")
             })
         });
     </script>

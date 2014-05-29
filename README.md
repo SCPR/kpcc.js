@@ -151,7 +151,7 @@ Open the files in the `test/` directory and check for errors. These are tested a
 ### Building
 ```
 bundle install
-bundle exec ruby build.rb
+rake build
 ```
 
 Alternatively (and preferably), you can just run Guard (via `bundle exec guard`), and a development version will be built for you every time you save a coffee file.
@@ -159,7 +159,7 @@ Alternatively (and preferably), you can just run Guard (via `bundle exec guard`)
 
 ### Releasing
 ```
-RELEASE=true bundle exec ruby build.rb
+rake release
 ```
 
 It will ask you the version.
